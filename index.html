@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PK DARK | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+
+  <!-- Three.js and Vanta Birds -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta@latest/dist/vanta.birds.min.js" defer></script>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Vanta Birds background container -->
+  <div id="vanta-bg" style="position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: -1;"></div>
+
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
+
+  <!-- Header and Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><button class="nav-btn btn-3d" data-target="home">Home</button></li>
+        <li><button class="nav-btn btn-3d" data-target="about">About</button></li>
+        <li><button class="nav-btn btn-3d" data-target="skills">Skills</button></li>
+        <li><button class="nav-btn btn-3d" data-target="projects">Projects</button></li>
+        <li><button class="nav-btn btn-3d" data-target="contact">Contact</button></li>
+      </ul>
+    </nav>
+
+    <button id="theme-toggle" aria-label="Toggle light/dark theme" class="btn-3d" title="Toggle light/dark theme">🌙</button>
+  </header>
+
+  <!-- Main Content Sections -->
+  <main>
+
+    <section id="home" class="section" data-animate>
+      <img src="https://via.placeholder.com/150" alt="Profile photo of PK DARK" class="profile-photo" />
+      <h1 class="glow-3d">Hi, I'm <span>PK DARK</span></h1>
+      <p class="tagline section-text">B.Arch Student | Tech Enthusiast | Creative Designer</p>
+      <p class="section-text">Welcome to my portfolio where architecture meets cutting-edge technology and creative design. I strive to bring futuristic visions to life with precision and passion.</p>
+    </section>
+
+    <section id="about" class="section" data-animate>
+      <h2 class="glow-3d">About Me</h2>
+      <p class="section-text">I am passionate about architecture, technology, and creating futuristic designs. I blend creativity with engineering and computer science to craft innovative solutions that shape the future.</p>
+    </section>
+
+    <section id="skills" class="section" data-animate>
+      <h2 class="glow-3d">Skills</h2>
+      <ul class="skills-list">
+        <li data-percent="90">AutoCAD & 3D Design
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 0;"></div>
+            <span class="skill-percent">90%</span>
+          </div>
+        </li>
+        <li data-percent="85">HTML, CSS, JavaScript
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 0;"></div>
+            <span class="skill-percent">85%</span>
+          </div>
+        </li>
+        <li data-percent="70">AI & Machine Learning Basics
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 0;"></div>
+            <span class="skill-percent">70%</span>
+          </div>
+        </li>
+        <li data-percent="80">UI/UX Design
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 0;"></div>
+            <span class="skill-percent">80%</span>
+          </div>
+        </li>
+        <li data-percent="75">Engineering Visualization
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: 0;"></div>
+            <span class="skill-percent">75%</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section" data-animate>
+      <h2 class="glow-3d">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-photo" aria-label="AI-Driven Movie Recommendation project photo"></div>
+          <h3>AI-Driven Movie Recommendation</h3>
+          <p>Personalized recommendation system with marketing insights.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-photo" aria-label="3D Architectural Model project photo"></div>
+          <h3>3D Architectural Model</h3>
+          <p>Modern building concept using advanced CAD tools.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-photo" aria-label="Interactive Urban Planning Tool project photo"></div>
+          <h3>Interactive Urban Planning Tool</h3>
+          <p>Dynamic city planning interface integrating GIS data.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-photo" aria-label="Virtual Reality Architecture Experience project photo"></div>
+          <h3>Virtual Reality Architecture Experience</h3>
+          <p>Immersive VR walkthroughs of modern architectural designs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section" data-animate>
+      <h2 class="glow-3d">Certificates</h2>
+      <div class="certificates-grid">
+        <img src="#" alt="Certificate 1" />
+        <img src="#" alt="Certificate 2" />
+        <img src="#" alt="Certificate 3" />
+        <img src="#" alt="Certificate 4" />
+      </div>
+    </section>
+
+    <section id="contact" class="section" data-animate>
+      <h2 class="glow-3d">Contact Me</h2>
+      <form class="contact-form" action="https://formspree.io/f/mzzvrpkp" method="POST" autocomplete="off">
+        <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+        <input type="email" name="_replyto" placeholder="Your Email" required autocomplete="email" />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn-3d">Send</button>
+      </form>
+
+      <div class="connect-me" aria-label="Connect with me links">
+        <a class="connect-link" href="https://www.linkedin.com/in/praveen-kumar-034274309/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
+        <a class="connect-link" href="https://github.com/KPSkumar143" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 PK DARK | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Initialize Vanta Birds background
+      VANTA.BIRDS({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200,
+        minWidth: 200,
+        scale: 1,
+        scaleMobile: 1,
+        color1: 0x00ff7f,  // neon green
+        colorMode: "variance",
+        separation: 76,
+      });
+
+      // Smooth scroll on nav buttons
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
